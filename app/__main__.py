@@ -31,7 +31,7 @@ def add_cors(app: FastAPI):
 
 @asynccontextmanager
 async def on_startup(_: FastAPI):
-    kds_db = Storage().get_connection()
+    storage = Storage().get_connection()
     # Some business
     yield
 
